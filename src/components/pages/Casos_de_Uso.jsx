@@ -2,6 +2,10 @@ import React from "react"
 
 export const Casos_de_Uso = () =>{
     return (<>
-        <div>Casos de Uso</div>
+        <div className="pagina">
+            <div className="pagn">
+                <h1>Casos de Uso</h1>
+            </div>
+        </div>
     </>)
 }

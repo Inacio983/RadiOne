@@ -13,9 +13,7 @@ export const Navbar = () =>{
         <div className="menu" onClick={() => {
           setMenuOpen(!menuOpen);
         }}>
-            <span></span>
-            <span></span>
-            <span></span>
+            <img src="seta.svg" className={menuOpen ? "baixo" : ""} />
         </div>
         <div className="abas">
           <ul className={menuOpen ? "open" : ""}>
@@ -26,7 +24,7 @@ export const Navbar = () =>{
               <NavLink to="/casos_de_uso">Casos de Uso</NavLink>
             </li>
             <li onClick={() => {setMenuOpen(false) }}>
-              <NavLink to="/documentos">Documentação $ Suporte</NavLink>
+              <NavLink to="/documentos">Documentação & Suporte</NavLink>
             </li>
             <li onClick={() => {setMenuOpen(false) }}>
               <NavLink to="/sobre">Sobre o RadiOne</NavLink>
