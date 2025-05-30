@@ -7,7 +7,7 @@ export const Navbar = () =>{
 
     return (
     <nav>
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" onClick={() => {setMenuOpen(false) }}>
             <img src="logoB.svg"></img>
         </Link>
         <div className="menu" onClick={() => {
@@ -23,10 +23,16 @@ export const Navbar = () =>{
               <NavLink to="/">Home</NavLink>
             </li>
             <li onClick={() => {setMenuOpen(false) }}>
-              <NavLink to="/casos_de_uso">Casos</NavLink>
+              <NavLink to="/casos_de_uso">Casos de Uso</NavLink>
             </li>
             <li onClick={() => {setMenuOpen(false) }}>
-              <NavLink to="/documentos">Docs</NavLink>
+              <NavLink to="/documentos">Documentação $ Suporte</NavLink>
+            </li>
+            <li onClick={() => {setMenuOpen(false) }}>
+              <NavLink to="/sobre">Sobre o RadiOne</NavLink>
+            </li>
+            <li onClick={() => {setMenuOpen(false) }}>
+              <NavLink to="/contato">Contato</NavLink>
             </li>
           </ul>
         </div>
