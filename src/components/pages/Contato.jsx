@@ -43,35 +43,46 @@ export const Contato = () =>{
 
     return (<>
         <div className="pagina">
-            <div className="pagn">
-                <h1>Contato</h1>
+            <div className="flx">
+                <div className="pagn">
+                    <h1>Contato</h1>
+                </div>
             </div>
             <div className="fcontainer">
                 <form className="formulario" onSubmit={sendEmail}>
-                    <input
+                    <div className="formItem">
+                        <label>Nome</label>
+                        <input
                         className="input"
                         type="text"
                         placeholder="Digite seu nome completo"
                         onChange={(e) => setName(e.target.value)}
                         value={name}
-                    />
+                        />
+                    </div>
 
-                    <input
+                    <div className="formItem">
+                        <label>E-mail</label>
+                        <input
                         className="input"
                         type="text"
                         placeholder="Digite seu email"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
-                    />
+                        />
+                    </div>
 
-                    <textarea
+                    <div className="formItem">
+                        <label>Mensagem</label>
+                        <textarea
                         className="textarea"
                         placeholder="Digite sua mensagem"
                         onChange={(e) => setMessage(e.target.value)}
                         value={message}
-                    />
+                        />
+                    </div>
 
-                    <input className="button" type="submit" value="Enviar"/>
+                        <input className="button" type="submit" value="Enviar"/>
                 </form>
             </div>
         </div>
