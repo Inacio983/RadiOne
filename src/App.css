@@ -44,6 +44,14 @@ body{
   font-style: normal;
 }
 
+@media (max-width: 500px){
+
+.pagn h1{
+  font-size: 20px;
+}
+
+}
+
 .pagn p{
   color: rgba(255, 107, 0, 0.75);
   padding-top: 1rem;
