@@ -5,7 +5,7 @@ export const Documentos = () =>{
         <div className="pagina">
             <div className="flx">
                 <div className="pagn">
-                    <h1>Documentação & Suporte</h1>
+                    <h1>Documentação<br/>& Suporte</h1>
                 </div>
             </div>
         </div>

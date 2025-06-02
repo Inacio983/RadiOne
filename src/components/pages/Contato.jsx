@@ -48,7 +48,7 @@ export const Contato = () =>{
                     <h1>Contato</h1>
                 </div>
             </div>
-            <div className="pcontainer">
+            <div className="pcontainer" id="cont">
                 <form className="formulario" onSubmit={sendEmail}>
                     <div className="formItem">
                         <label>Nome</label>
