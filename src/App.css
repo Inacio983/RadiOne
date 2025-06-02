@@ -57,7 +57,7 @@ body{
   padding-top: 1rem;
 }
 
-.fcontainer{
+.pcontainer{
   display: flex;
   flex-direction: column;
   background-color: #003366;
@@ -111,4 +111,16 @@ body{
   color: #FF6B00;
   padding: 5px;
   font-weight: bold;
+}
+
+.radio{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.radio img{
+  display: flex;
+  width: 80%;
 }

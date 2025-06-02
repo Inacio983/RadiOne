@@ -9,6 +9,11 @@ export const Home = () =>{
                     <p>Comunicação off-grid fácil e prática</p>
                 </div>
             </div>
+
+            <div className="radio">
+                <img src="radio.svg"></img>
+            </div>
+
         </div>
     </>)
 }
