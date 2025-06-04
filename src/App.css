@@ -4,6 +4,11 @@ body{
   max-width: 100vw;
   height: 100vh;
 }
+
+body::selection{
+  background-color: #E0E0E0;
+}
+
 #root {
   width: 100%;
   height: 100%;
@@ -107,6 +112,20 @@ body{
   padding: 5px;
 }
 
+.vazio{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.vazio .input, .vazio .textarea{
+  border: 2px solid #ff0000;
+}
+
+.input:focus, .textarea:focus{
+  background-color: #001e3b;
+}
+
 ::placeholder{
   color: rgba(255, 107, 0, 0.9);
   font-family: "Open Sans", sans-serif;
@@ -116,6 +135,14 @@ body{
   width: 100%;
   height: 20vh;
   resize: none;
+}
+
+small{
+  color: rgb(255, 0, 0);
+}
+
+small.ok{
+  display: none;
 }
 
 .button{
@@ -153,6 +180,7 @@ body{
   margin-top: 2rem;
   margin-bottom: 5rem;
   justify-content: space-between;
+  position: relative;
 }
 
 .radioRes{
@@ -199,3 +227,4 @@ body{
 .dir .expl{
   margin: 0.5vw;
 }
+/* fim setas manuais */

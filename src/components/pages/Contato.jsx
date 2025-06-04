@@ -5,18 +5,13 @@ export const Contato = () =>{
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [vazio, setVazio] = useState(true)
 
     function sendEmail(e){
         e.preventDefault();
 
-        if(name === ''){
-            alert("Preencha o nome")
-            return;
-        }else if(email === ''){
-            alert("Preencha o email")
-            return;
-        }else if(message === ''){
-            alert("Escreva uma mensagem")
+        if(name === '' || email === '' || message === ''){
+            alert("Preencha todos os campos")
             return;
         }
 
@@ -28,17 +23,19 @@ export const Contato = () =>{
         }
 
         emailjs.send("service_9h0lgdn", "template_339tj58", templateParams, "h73Evimw0D37lD_Oi")
-        .then((response) => { /*não reconheceu response e err*/
-            console.log("Email enviado", response.status, response,text)
+        .then((response) => {
+            console.log("Email enviado", response.status, response.text)
             setName('')
             setEmail('')
             setMessage('')
+            setVazio(true)
         }, (err) => {
             console.log("Erro: ", err)
         })
         setName('')
         setEmail('')
         setMessage('')
+        setVazio(true)
     }
 
     return (<>
@@ -50,39 +47,43 @@ export const Contato = () =>{
             </div>
             <div className="pcontainer" id="cont">
                 <form className="formulario" onSubmit={sendEmail}>
-                    <div className="formItem">
+                    <div className={name || vazio ? "formItem" : "vazio"}>
                         <label>Nome</label>
                         <input
+                        id={name ? "cNome" : ""}
                         className="input"
                         type="text"
                         placeholder="Digite seu nome completo"
                         onChange={(e) => setName(e.target.value)}
                         value={name}
                         />
+                        <small className={name || vazio ? "ok" : ""}>Informe seu nome</small>
                     </div>
 
-                    <div className="formItem">
+                    <div className={email || vazio ? "formItem" : "vazio"}>
                         <label>E-mail</label>
-                        <input
+                        <input id={email ? "cEmail" : ""}
                         className="input"
                         type="text"
                         placeholder="Digite seu email"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                         />
+                        <small className={email || vazio ? "ok" : ""}>Informe seu email para contato</small>
                     </div>
 
-                    <div className="formItem">
+                    <div className={message || vazio ? "formItem" : "vazio"}>
                         <label>Mensagem</label>
-                        <textarea
+                        <textarea id={message ? "cMsg" : ""}
                         className="textarea"
                         placeholder="Digite sua mensagem"
                         onChange={(e) => setMessage(e.target.value)}
                         value={message}
                         />
+                        <small className={message || vazio ? "ok" : ""}>Escreva uma mensagem</small>
                     </div>
 
-                        <input className="button" type="submit" value="Enviar"/>
+                        <input onClick={() => {setVazio(false)}} className="button" type="submit" value="Enviar"/>
                 </form>
             </div>
         </div>
