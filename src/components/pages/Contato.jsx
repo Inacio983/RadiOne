@@ -11,7 +11,7 @@ export const Contato = () =>{
         e.preventDefault();
 
         if(name === '' || email === '' || message === ''){
-            alert("Preencha todos os campos")
+            /*alert("Preencha todos os campos")*/
             return;
         }
 
