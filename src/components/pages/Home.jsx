@@ -1,4 +1,5 @@
 import React from "react"
+import { Radio } from '../Radio';
 
 export const Home = () =>{
     return (<>
@@ -10,9 +11,7 @@ export const Home = () =>{
                 </div>
             </div>
 
-            <div className="radio">
-                <img src="radio.svg"></img>
-            </div>
+            <Radio />
             
             <div className="pcontainer">
                 <h2>Arquitetura e Tecnologia:</h2>

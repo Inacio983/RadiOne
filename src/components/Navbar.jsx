@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
-import "./Navbar.css"
 
 export const Navbar = () =>{
     {/* true = menu aberto, false = menu fechado */}
@@ -16,7 +15,9 @@ export const Navbar = () =>{
             setMenuOpen(!menuOpen);
           }}>
               {/* muda o nome para inverter a seta no css */}
-              <img src="seta.svg" className={menuOpen ? "baixo" : ""} />
+              <svg className={menuOpen ? "baixo" : ""} viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
+              </svg>
           </div>
         </div>
 
