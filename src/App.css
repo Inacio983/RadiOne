@@ -30,6 +30,7 @@ nav ul li a.active {
 nav {
     width: 100%;
     height: 3.6rem;
+    border-bottom: 2px solid var(--cor-secundaria);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -267,7 +268,7 @@ small.ok{
 
 
 
-/*Teste setas manuais MELHOR*/
+/*Radio com testo e setas adaptáveis*/
 .setaResp{
   display: flex;
   width: 100%;
@@ -282,10 +283,6 @@ small.ok{
   width: fit-content;
   display: flex;
   justify-content: space-between;
-}
-
-.radioRes{
-  width: 45vw;
 }
 
 .radioRes img{
@@ -341,6 +338,44 @@ small.ok{
   fill: var(--cor-secundaria);
   width: 70vw;
   left: 12.5vw;
-  top: 1.8vw;
+  top: 1.9vw;
+}
+
+
+
+@media (min-width: 600px){
+.expl{
+  font-size: 2vw;
+  border-radius: 1vw;
+}
+
+.esq .expl{
+  margin: 1.8vw;
+}
+
+.dir .expl{
+  margin: 1vw;
+}
+
+.dir{
+  margin-left: 5vw;
+}
+.esq{
+  margin-top: 1vw;
+}
+
+.setasFlu svg{
+  position: absolute;
+  fill: var(--cor-secundaria);
+  width: 70vw;
+  left: 15.5vw;
+  top: 2.5vw;
+}
+
+.setasFlu svg path{
+  d: path("M140 123L149 132L140 141V135H96.5L96.5 127.5H43V121.5H102.501V129H140V123Z M141 283.5L150 292.5L141 301.5V295.5H38.5L38.5 307H0V301H32.5L32.5 289.5H141V283.5Z M597 157L588 166L597 175V169H939.5V67H1047.5V6.5L1145 6.5V0.5H1041.5V61H933.5V163H597V157Z M533 173.5L524 182.5L533 191.5V185.5H1032.5V126L1196 126V120L1026.5 120V179.5H533V173.5Z M527.5 197L518.5 206L527.5 215V209H999.5V260L1105.5 259.5V253.5L1006.5 254V203H527.5V197Z M559 216.5L550 225.5L559 234.5V228.5H933.5V382H1251V376L939.5 376V222.5H559V216.5Z");
+
+}
+
 }
 /* fim setas manuais MELHOR */
