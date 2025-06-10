@@ -469,7 +469,7 @@ small.ok{
 }
 
 .face-ladoD{
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(100px);
 }
 
 .face-verso{
@@ -477,7 +477,7 @@ small.ok{
 }
 
 .face-ladoE{
-  transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(100px);
 }
 
 .face-topo{
