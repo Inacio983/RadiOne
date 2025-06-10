@@ -7,6 +7,8 @@ body{
   --cor-secundaria: #FF6B00;
   --cor-prin-clara: color-mix(in oklab, var(--cor-principal) 95%, #fff);
   --cor-prin-escura: color-mix(in oklab, var(--cor-principal) 80%, #000);
+  --contraste-prin: #fff;
+  --contraste-secn: #000;
   --cor-fundo: #E0E0E0;
 }
 
@@ -23,7 +25,7 @@ body::selection{
 /*Pra identificar em qual aba você está*/
 nav ul li a.active {
     background-color: var(--cor-secundaria);
-    color: var(--cor-principal);
+    color: var(--contraste-secn);
 }
 
 /*nav parte superior*/
@@ -82,7 +84,7 @@ nav ul li{
 nav ul li a{
     display: block;
     text-decoration: none;
-    color: var(--cor-secundaria);
+    color: var(--contraste-prin);
     padding: 0.5rem;
     padding-left: 1.5rem;
 }
@@ -123,12 +125,12 @@ nav svg.baixo{
 
 .App {
   background-color: var(--cor-fundo);
-  color: var(--cor-secundaria);
+  color: var(--contraste-prin);
   width: 100%;
   height: 100%;
   min-height: 100vh;
   overflow-wrap: break-word;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 
 }
 
@@ -170,7 +172,7 @@ nav svg.baixo{
 }
 
 .pagn p{
-  color: var(--cor-secundaria);
+  color: var(--contraste-prin);
   opacity: 0.75;
   padding-top: 1rem;
 }
@@ -180,7 +182,6 @@ nav svg.baixo{
   display: flex;
   flex-direction: column;
   background-color: var(--cor-principal);
-  color: var(--cor-secundaria);
   width: 80%;
   min-width: 210px;
   justify-self: center;
@@ -188,6 +189,11 @@ nav svg.baixo{
   border-radius: 10px;
   margin-top: 1rem;
   padding: 1rem;
+  font-size: 16px;
+}
+
+h2{
+  margin-bottom: 1rem;
 }
 
 /*Formulário*/
@@ -215,7 +221,7 @@ nav svg.baixo{
   outline: none;
   border: 2px solid var(--cor-secundaria);
   background-color: var(--cor-prin-clara);
-  color: var(--cor-secundaria);
+  color: var(--contraste-prin);
   margin-top: 5px;
   padding: 5px;
 }
@@ -235,9 +241,9 @@ nav svg.baixo{
 }
 
 ::placeholder{
-  color: var(--cor-secundaria);
+  color: var(--contraste-prin);
   opacity: 0.9;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .textarea{
@@ -261,7 +267,7 @@ small.ok{
   min-width: 60px;
   border: 2px solid var(--cor-secundaria);
   background-color: var(--cor-prin-clara);
-  color: var(--cor-secundaria);
+  color: var(--contraste-prin);
   padding: 5px;
   font-weight: bold;
 }
