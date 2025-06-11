@@ -4,6 +4,8 @@ import { Radio } from '../RadioSts';
 export const Home = () =>{
     const [rotY, setRotY] = useState(0)
     const [rotX, setRotX] = useState(0)
+    console.log("rotY: ", rotY)
+    console.log("rotX: ", rotX)
 
     return (<>
         <div className="pagina">
@@ -28,25 +30,25 @@ export const Home = () =>{
                     <img class="face face-baixo" src="baixo.png"/>
                 </div>
                 <div className="setasCubo">
-                    <div className="contSeta setaD" onClick={() => {setRotX(rotX+1) }} style={{transform:'rotateZ(-90deg)'}}>
+                    <div className="contSeta setaD" onClick={() => {setRotX(rotX-1) }} style={{transform:'rotateZ(-90deg)'}}>
                         <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
                         </svg>
                     </div>
 
-                    <div className="contSeta setaB" onClick={() => {setRotY(rotY-1) }}>
+                    <div className="contSeta setaB" onClick={() => {setRotY(rotY+1) }}>
                         <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
                         </svg>
                     </div>
                     
-                    <div className="contSeta setaE" onClick={() => {setRotX(rotX-1) }} style={{transform:'rotateZ(90deg)'}}>
+                    <div className="contSeta setaE" onClick={() => {setRotX(rotX+1) }} style={{transform:'rotateZ(90deg)'}}>
                         <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
                         </svg>
                     </div>
                     
-                    <div className="contSeta setaT" onClick={() => {setRotY(rotY+1) }} style={{transform:'rotateZ(180deg)'}}>
+                    <div className="contSeta setaT" onClick={() => {setRotY(rotY-1) }} style={{transform:'rotateZ(180deg)'}}>
                         <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
                         </svg>
