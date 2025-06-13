@@ -1,63 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
-export const Carrossel = ( {images} ) =>{
-    const [currentIndex, setCurrentIndex] = useState(0);
+export const Carrossel = () =>{
+    const images = [
+        "baixo.png",
+        "case.svg",
+        "verso.png"]
 
-    // Função para ir para o slide anterior
-    const goToPrev = () => {
-        const isFirstSlide = currentIndex === 0;
-        const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
+    const titulos = [
+        "um",
+        "dois",
+        "três"]
+
+    const textos = [
+        "primeiro texto",
+        "segundo texto",
+        "terceiro texto"]
+
+    
+    const [idx, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
     };
-
-    // Função para ir para o próximo slide
-    const goToNext = () => {
-        const isLastSlide = currentIndex === images.length - 1;
-        const newIndex = isLastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
-    };
-
-    // Função para ir para um slide específico pelos dots
-    const goToSlide = (slideIndex) => {
-        setCurrentIndex(slideIndex);
-    };
-
-    // Efeito para rolagem automática (opcional)
-    useEffect(() => {
-        const interval = setInterval(() => {
-            goToNext();
-        }, 5000); // Muda a cada 5 segundos
-
-        return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
-    }, [currentIndex, images.length]); // Reexecuta o efeito se o slide ou o número de imagens mudar
 
     return (
-        <div className="carousel-container">
-            <div
-                className="carousel-slide"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-                {images.map((image, index) => (
-                    <img key={index} src={image} alt={`Slide ${index + 1}`} />
-                ))}
+    <Carousel activeIndex={idx} onSelect={handleSelect}>
+        {images.map((image, index) => (
+        <Carousel.Item>
+            <div className='cent'>
+            <img src={image}/>
             </div>
-
-            <button className="carousel-button prev" onClick={goToPrev}>
-                &#10094;
-            </button>
-            <button className="carousel-button next" onClick={goToNext}>
-                &#10095;
-            </button>
-
-            <div className="carousel-dots">
-                {images.map((_, index) => (
-                    <span
-                        key={index}
-                        className={`dot ${currentIndex === index ? 'active' : ''}`}
-                        onClick={() => goToSlide(index)}
-                    ></span>
+            <Carousel.Caption>
+            <h3>{titulos[index]}</h3>
+            <p>{textos[index]}</p>
+            </Carousel.Caption>
+        </Carousel.Item>
                 ))}
-            </div>
-        </div>
+    </Carousel>
     );
 }

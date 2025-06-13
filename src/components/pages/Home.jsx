@@ -4,11 +4,6 @@ import { Cubo } from '../Cubo'
 import { Carrossel } from "../Carrossel"
 
 export const Home = () =>{
-    const slide = [
-        "baixo.png",
-        "topo.png",
-        "verso.png"]
-
 
     return (<>
         <div className="pagina">
@@ -23,7 +18,7 @@ export const Home = () =>{
                 <iframe src="https://www.youtube.com/embed/UE5dV_HRGH0?si=6x7RTiMtyuyWeovS&rel=0&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <Carrossel images={slide}/>
+            <Carrossel />
 
             <Cubo />
 
