@@ -217,6 +217,7 @@ html{
 #cont{
   width: 60%;
   background-color: var(--cor-principal);
+  color: var(--contraste-1);
 }
 
 @media (max-width: 600px){
