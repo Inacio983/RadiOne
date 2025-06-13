@@ -3,8 +3,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 export const Carrossel = () =>{
     const images = [
-        "baixo.png",
         "case.svg",
+        "baixo.png",
         "verso.png"]
 
     const titulos = [

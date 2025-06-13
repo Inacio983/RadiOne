@@ -515,7 +515,7 @@ html{
 /* Carrossel */
 html{
 .slide{
-  height: 40vw;
+  height: 40vh;
 }
 .carousel-inner{
   justify-self: center;
@@ -531,7 +531,10 @@ html{
   height: 100%;
 }
 .cent img{
-  height: 100%;
-  max-width: 100%;
+  max-width: 70vw;
+  max-height: 100%;
+}
+.carousel-caption p{
+  margin-bottom: 0;
 }
 }
