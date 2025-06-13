@@ -1,11 +1,14 @@
-import React, { useState } from "react"
-import { Radio } from '../RadioSts';
+import React from "react"
+import { Radio } from '../RadioSts'
+import { Cubo } from '../Cubo'
+import { Carrossel } from "../Carrossel"
 
 export const Home = () =>{
-    const [rotY, setRotY] = useState(0)
-    const [rotX, setRotX] = useState(0)
-    console.log("rotY: ", rotY)
-    console.log("rotX: ", rotX)
+    const slide = [
+        "baixo.png",
+        "topo.png",
+        "verso.png"]
+
 
     return (<>
         <div className="pagina">
@@ -20,45 +23,13 @@ export const Home = () =>{
                 <iframe src="https://www.youtube.com/embed/UE5dV_HRGH0?si=6x7RTiMtyuyWeovS&rel=0&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <div className="container-cubo">
-                <div class="cubo" style={{transform: 'rotateX('+rotY*90+'deg) rotateY('+rotX*90+'deg)'}}>
-                    <img class="face face-frente" src="frente.png"/>
-                    <img class="face face-ladoD" src="ladoD.png"/>
-                    <img class="face face-verso" src="verso.png"/>
-                    <img class="face face-ladoE" src="ladoE.png"/>
-                    <img class="face face-topo" src="topo.png"/>
-                    <img class="face face-baixo" src="baixo.png"/>
-                </div>
-                <div className="setasCubo">
-                    <div className="contSeta setaD" onClick={() => {setRotX(rotX-1) }} style={{transform:'rotateZ(-90deg)'}}>
-                        <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
-                        </svg>
-                    </div>
+            <Carrossel images={slide}/>
 
-                    <div className="contSeta setaB" onClick={() => {setRotY(rotY+1) }}>
-                        <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
-                        </svg>
-                    </div>
-                    
-                    <div className="contSeta setaE" onClick={() => {setRotX(rotX+1) }} style={{transform:'rotateZ(90deg)'}}>
-                        <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
-                        </svg>
-                    </div>
-                    
-                    <div className="contSeta setaT" onClick={() => {setRotY(rotY-1) }} style={{transform:'rotateZ(180deg)'}}>
-                        <svg viewBox="0 0 92 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M81 0L92 11L46 57L0 11L11 0L46 35L81 0Z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+            <Cubo />
 
             <Radio />
             
-            <div className="pcontainer">
+            <div className="pcontainer" >
                 <h2>RadiOne:</h2>
                 <p>O <strong>RadiOne</strong> é um dispositivo compacto e revolucionário que combina a simplicidade de um rádio com a conectividade moderna de um smartphone. Ao conectar o RadiOne ao seu celular via cabo micro-USB, o usuário ganha acesso a uma plataforma de comunicação por texto, permitindo a troca de mensagens em tempo real em diversas salas de chat. Essa funcionalidade é ideal para manter a comunicação em situações onde a conectividade tradicional, como internet ou redes de telefonia, não está disponível, oferecendo uma solução prática e confiável.</p>
     

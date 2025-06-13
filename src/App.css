@@ -10,7 +10,7 @@ body{
   --cor-prin-escura: color-mix(in oklab, var(--cor-principal) 80%, #000);
   --contraste-prin: #fff;
   --contraste-secn: #000;
-  --cor-fundo: #E0E0E0;
+  --cor-fundo: #003366;
 }
 
 body::selection{
@@ -503,4 +503,76 @@ html{
 .face-baixo{
   transform: rotateX(-90deg) translateZ(100px);
 }
+}
+
+.carousel-container {
+    position: relative;
+    width: 600px; /* Ajuste conforme necessário */
+    height: 400px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; /* Centraliza na página */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Garante que o slide ocupe a altura do container */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    flex-shrink: 0; /* Impede que as imagens encolham */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #717171;
 }
