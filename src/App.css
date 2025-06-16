@@ -34,6 +34,11 @@ body::selection{
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
+
+img{
+  user-select: none;
+}
+
 }
 
 
@@ -306,6 +311,7 @@ html{
 .video iframe{
   width: 89.6vw;
   height: 50.4vw;
+  user-select: none;
 }
 }
 
@@ -424,57 +430,47 @@ html{
 html{
 .container-cubo{
   display: flex;
+  align-items: center;
   width: 100%;
-  height: 500px;
-  justify-content: center;
-  align-content: center;
-  margin-top: 3rem;
+  height: 24vw;
+  margin-top: 5rem;
   margin-bottom: 5rem;
-  position: relative;
+}
+
+.rot{
+  display: flex;
 }
 
 .setasCubo{
-    width: 50px;
-    height: 50px;
-    align-self: center;
-    position: absolute;
+  width: 24vw;
+  height: 24vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10vw;
+  margin-right: 4vw;
 }
 
 .contSeta{
-    position: absolute;
-    background-color: var(--cor-principal);
-    width: 50px;
-    height: 50px;
-    align-content: center;
+    display: flex;
     justify-content: center;
+    width: 8vw;
+    height: 8vw;
+    padding: 1vw;
+    margin: .5vw;
+    border: 2px solid var(--contraste-1);
 }
 
 .setasCubo svg{
-  fill: var(--cor-secundaria);
-}
-
-.setaD{
-  left: 180px;
-}
-
-.setaE{
-  right: 180px;
-}
-
-.setaT{
-  bottom: 180px;
-}
-
-.setaB{
-  top: 180px;
+  fill: var(--cor-logo-1);
 }
 
 .cubo {
-  width: 200px;
-  height: 200px;
+  width: 24vw;
+  height: 24vw;
   transform-style: preserve-3d;
-  align-self: center;
-  transition: .7s;
+  transition: transform .7s;
 }
 
 .face {
@@ -483,44 +479,82 @@ html{
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
 }
 
 .face-frente {
-  transform: translateZ(100px);
+  transform: translateZ(12vw);
 }
 
 .face-ladoD{
-  transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(12vw);
 }
 
 .face-verso{
-  transform: rotateY(180deg) translateZ(100px);
+  transform: rotateY(180deg) translateZ(12vw);
 }
 
 .face-ladoE{
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(12vw);
 }
 
 .face-topo{
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(12vw);
 }
 
 .face-baixo{
-  transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(12vw);
+}
+
+@media (max-width: 600px){
+.container-cubo{
+height: 40vw;
+}
+.cubo {
+width: 40vw;
+height: 40vw;
+}
+.setasCubo{
+  margin-left: 0;
+  margin-right: 6vw;
+}
+
+.face-frente {
+  transform: translateZ(20vw);
+}
+
+.face-ladoD{
+  transform: rotateY(-90deg) translateZ(20vw);
+}
+
+.face-verso{
+  transform: rotateY(180deg) translateZ(20vw);
+}
+
+.face-ladoE{
+  transform: rotateY(90deg) translateZ(20vw);
+}
+
+.face-topo{
+  transform: rotateX(90deg) translateZ(20vw);
+}
+
+.face-baixo{
+  transform: rotateX(-90deg) translateZ(20vw);
+}
 }
 }
 
 /* Carrossel */
 html{
 .slide{
-  height: 40vh;
+  height: 35vw;
 }
 .carousel-inner{
   justify-self: center;
   height: 100%;
-  width: 70%;
+  width: calc(100% - 6rem);
 }
 .carousel-item{
   height: 100%;
@@ -531,8 +565,27 @@ html{
   height: 100%;
 }
 .cent img{
-  max-width: 70vw;
+  max-width: 90vw;
   max-height: 100%;
+}
+.carousel-indicators{
+  margin-bottom: 0;
+}
+
+.carousel-caption{
+  bottom: 1.5rem;
+  padding: 1rem;
+  width: fit-content;
+  justify-self: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.carousel-control-prev{
+  width: 2rem;
+  left: 1rem;
+}
+.carousel-control-next{
+  width: 2rem;
+  right: 1rem;
 }
 .carousel-caption p{
   margin-bottom: 0;
