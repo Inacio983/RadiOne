@@ -3,19 +3,19 @@ import Carousel from 'react-bootstrap/Carousel';
 
 export const Carrossel = () =>{
     const images = [
-        "case.svg"/*,
-        "baixo.png",
-        "verso.png"*/]
+        "case.svg",
+        "logoB.svg",
+        "aberto.jpg"]
 
     const titulos = [
-        "um",
-        "dois",
-        "três"]
+        "Rádio",
+        "Logo",
+        "Case"]
 
     const textos = [
-        "primeiro texto",
-        "segundo texto",
-        "terceiro texto"]
+        "Rádio do usuário",
+        "Logo da empresa nnnnnnnnnn nnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnn nnnnnnnnnnnnn nnnnnnnnnnnnn nnnnnnnnnnnnnnn nnnnnnnnnnnnnnn   nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
+        "Case aberta"]
 
     
     const [idx, setIndex] = useState(0);

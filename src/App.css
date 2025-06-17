@@ -458,8 +458,6 @@ html{
     width: 8vw;
     height: 8vw;
     padding: 1vw;
-    margin: .5vw;
-    border: 2px solid var(--contraste-1);
 }
 
 .setasCubo svg{
@@ -550,6 +548,8 @@ height: 40vw;
 html{
 .slide{
   height: 35vw;
+  display: flex;
+  justify-content: center;
 }
 .carousel-inner{
   justify-self: center;
@@ -565,19 +565,26 @@ html{
   height: 100%;
 }
 .cent img{
-  max-width: 90vw;
+  max-width: 100%;
   max-height: 100%;
 }
 .carousel-indicators{
   margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  justify-self: center;
 }
 
 .carousel-caption{
   bottom: 1.5rem;
-  padding: 1rem;
+  padding: 1vw;
   width: fit-content;
   justify-self: center;
   background-color: rgba(0, 0, 0, 0.3);
+  max-height: 35%;
+  overflow-y: auto;
+  scrollbar-color: rgba(255,255,255,0.5) transparent;
+  scrollbar-width: thin;
 }
 .carousel-control-prev{
   width: 2rem;
