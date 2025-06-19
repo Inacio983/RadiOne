@@ -4,15 +4,13 @@ body{
   width: 100%;
   max-width: 100vw;
   height: 100vh;
-  --cor-principal: #fff;
-  --cor-secundaria: #003366;
-  --cor-prin-mark: color-mix(in oklab, var(--cor-principal) 95%, #000);
-  --cor-prin-escura: color-mix(in oklab, var(--cor-principal) 80%, #000);
+  --cor-1: #fff;
+  --cor-2: #003366;
+  --cor-3: #FF6B00;
+  --cor-1-mark: color-mix(in oklab, var(--cor-1) 95%, #000);
+  --cor-1-escura: color-mix(in oklab, var(--cor-1) 80%, #000);
   --contraste-1: #000;
   --contraste-2: #fff;
-  --cor-fundo: #003366;
-  --cor-logo-1: #FF6B00;
-  --cor-logo-2: #003366;
 }
 
 body::selection{
@@ -25,7 +23,7 @@ body::selection{
 }
 
 .App {
-  background-color: var(--cor-fundo);
+  background-color: var(--cor-2);
   color: var(--contraste-2);
   width: 100%;
   height: 100%;
@@ -46,7 +44,7 @@ img{
 html{
 /*Pra identificar em qual aba você está*/
 nav ul li a.active {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-2);
     color: var(--contraste-2);
 }
 
@@ -59,7 +57,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-1);
     position: sticky;
     top: 0;
     z-index: 9;
@@ -68,7 +66,7 @@ nav {
 .topo{
     width: 100vw;
     height: 100%;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-1);
     z-index: 5;
 }
 
@@ -84,10 +82,10 @@ nav .logo svg{
 }
 
 .wifi{
-  fill: var(--cor-logo-1);
+  fill: var(--cor-3);
 }
 .radiOne{
-  fill:  var(--cor-logo-2);
+  fill:  var(--cor-2);
 }
 
 /*nav aberta*/
@@ -108,8 +106,8 @@ nav ul.open{
 
 nav ul li{
     list-style: none;
-    border-top: 1px solid var(--cor-secundaria);
-    background-color: var(--cor-principal);
+    border-top: 1px solid var(--cor-2);
+    background-color: var(--cor-1);
 }
 
 nav ul li a{
@@ -121,7 +119,7 @@ nav ul li a{
 }
 
 nav ul li a:not(.active):hover{
-    background-color: var(--cor-prin-mark);
+    background-color: var(--cor-1-mark);
 }
 
 /*botão/seta*/
@@ -133,11 +131,11 @@ nav .menu {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
-    fill: var(--cor-secundaria);
+    fill: var(--cor-2);
 }
 
 .menu svg{
-    fill: var(--cor-secundaria);
+    fill: var(--cor-2);
   }
 
 nav svg.baixo{
@@ -147,7 +145,7 @@ nav svg.baixo{
 .fino{
     width: 100%;
     height: calc(100% - 3.6rem);
-    background-color: var(--cor-principal);
+    background-color: var(--cor-1);
     opacity: 0.3;
     position: absolute;
     z-index: 2;
@@ -168,7 +166,7 @@ html{
   height: calc(100% - 3.6rem);
   padding-bottom: 1rem;
   overflow-y: auto;
-  scrollbar-color: var(--cor-secundaria) var(--cor-principal);
+  scrollbar-color: var(--cor-2) var(--cor-1);
   scrollbar-width: thin;
 }
 
@@ -222,7 +220,7 @@ h2{
 html{
 #cont{
   width: 60%;
-  background-color: var(--cor-principal);
+  background-color: var(--cor-1);
   color: var(--contraste-1);
 }
 
@@ -244,8 +242,8 @@ html{
 
 .input, .textarea {
   outline: none;
-  border: 2px solid var(--cor-secundaria);
-  background-color: var(--cor-prin-mark);
+  border: 2px solid var(--cor-2);
+  background-color: var(--cor-1-mark);
   color: var(--contraste-1);
   margin-top: 5px;
   padding: 5px;
@@ -262,7 +260,7 @@ html{
 }
 
 .input:focus, .textarea:focus{
-  background-color: var(--cor-prin-escura);
+  background-color: var(--cor-1-escura);
 }
 
 ::placeholder{
@@ -290,8 +288,8 @@ small.ok{
   justify-self: center;
   width: 20%;
   min-width: 60px;
-  border: 2px solid var(--cor-secundaria);
-  background-color: var(--cor-prin-mark);
+  border: 2px solid var(--cor-2);
+  background-color: var(--cor-1-mark);
   color: var(--contraste-1);
   padding: 5px;
   font-weight: bold;
@@ -383,7 +381,7 @@ html{
 
 .setasFlu svg{
   position: absolute;
-  fill: #FF6B00;
+  fill: var(--cor-3);
   width: 70vw;
   left: 13vw;
   top: 1.9vw;
@@ -461,7 +459,7 @@ html{
 }
 
 .setasCubo svg{
-  fill: var(--cor-logo-1);
+  fill: var(--cor-3);
 }
 
 .cubo {
@@ -472,7 +470,7 @@ html{
 }
 
 .face {
-  background: var(--cor-principal);
+  background: var(--cor-1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -543,6 +541,7 @@ height: 40vw;
 }
 }
 }
+
 
 /* Carrossel */
 html{
